@@ -15,8 +15,6 @@ fields = ("Symbol","Name","LastSale","MarketCap","IPOyear","Sector","Industry","
 reader = csv.DictReader( csvfile, fields)
 
 rows = list(reader)
-print len(rows)
-raw_input()
 jsonfile.write("[")
 for i,row in enumerate(rows):
     if("Sector" in row["Sector"]):
